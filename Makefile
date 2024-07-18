@@ -1,11 +1,11 @@
 CFLAGS += -std=gnu11 -g
-EXES = BinaryTree
+EXES    = BinaryTree
 
-all:	$(EXES)
+all:  $(EXES)
 clean:
-	-rm -f $(EXES)
+	rm -f $(EXES)
 
 BinaryTree: BinaryTree.c
-	BinaryTree
-# don't treat all and clean as file targets
+
+
 .PHONY: all clean

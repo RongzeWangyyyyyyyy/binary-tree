@@ -29,18 +29,18 @@ struct Node* create (int value) {
  */
 void insert (struct Node* toNode, struct Node* n) {
   if (n->value <= toNode->value) {
-    if (toNode->right == 0) {
-      toNode->right = n;
-      n->parent=toNode;
-    } else {
-      insert(toNode->right, n);
-    }
-  } else {
     if (toNode->left == 0) {
       toNode->left = n;
       n->parent=toNode;
     } else {
       insert(toNode->left, n);
+    }
+  } else {
+    if (toNode->right == 0) {
+      toNode->right = n;
+      n->parent=toNode;
+    } else {
+      insert(toNode->right, n);
     }
   }
 }
